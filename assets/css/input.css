@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex items-center justify-center h-screen  bg-[#2f2f2f];
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.img-holder img {
+  @apply h-[390px] w-32  object-cover grayscale rounded-full;
+}
+.wrapper {
+  @apply w-[1000px] h-[500px] flex flex-row overflow-hidden rounded-3xl shrink items-center justify-center gap-3 p-7 bg-[#1f1f1f];
+}
+/* .img img:hover {
+  @apply h-[390px] w-[800px] object-cover grayscale-0 rounded-3xl duration-700 ease-in;
+} */
+.img-holder.active img {
+  @apply h-[390px] w-[800px] object-cover grayscale-0 rounded-full duration-700 ease-in;
+}
+@media (max-width: 480px) {
+  .img:nth-of-type(5) {
+    @apply hidden;
+  }
+}

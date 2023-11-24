@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/dist/css/styles.css" rel="stylesheet" />
+    <title>Expanding Cards/images</title>
+  </head>
+  <body class="">
+    <div class="wrapper">
+      <div class="img-holder">
+        <img src="./assets/img/img1.jpg" alt="" />
+      </div>
+      <div class="img-holder">
+        <img src="./assets/img/img2.jpg" alt="" />
+      </div>
+      <div class="img-holder">
+        <img src="./assets/img/img3.jpg" alt="" />
+      </div>
+      <div class="img-holder">
+        <img src="./assets/img/img4.jpg" alt="" />
+      </div>
+      <div class="img-holder">
+        <img src="./assets/img/img5.jpg" alt="" />
+      </div>
+    </div>
+    <script>
+      let img = document.querySelectorAll(".img-holder");
+      img.forEach((element) => {
+        if (element)
+          element.addEventListener("click", (event) => {
+            removeActiveClass();
+            element.classList.add("active");
+          });
+      });
+      function removeActiveClass() {
+        img.forEach((element) => {
+          element.classList.remove("active");
+        });
+      }
+    </script>
+  </body>
+</html>
